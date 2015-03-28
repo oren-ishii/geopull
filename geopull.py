@@ -21,7 +21,7 @@ banner = '''
 g = 'GPSInfo'
 exif_data = None
 #Images path
-path = 'images/' + sys.argv[1] + "/"
+path = None
 files = None
 
 #Create a list of images in the working directory
@@ -68,6 +68,8 @@ def printFormatted(latitude, longitude):
 #and performs/prints the geography lookup info. Not too complicated.
 def main():
 	user = sys.argv[1]
+	global path
+	path = 'images/' + sys.argv[1] + "/"
 	getPosts(client, user)
 	identifyPhotoPosts()
 	processURLS()
