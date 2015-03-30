@@ -71,6 +71,7 @@ def processURLS():
 #Follow the URLs in our collection and download each of the images
 #to the working directory. 
 def fetchImages(user):
+	print "[+] Found " + str(len(urls)) + " images."
 	print "[+] Beginning to download images. This can take a while, be patient."
 	count = 0
 	if not os.path.exists('images/' + user + '/'):
